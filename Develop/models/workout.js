@@ -1,2 +1,32 @@
-// name, type, weight, sets, reps, and duration of exercise.
+// date, name, type, weight, sets, reps, and duration of exercise, distance
 
+const mongoose = require('mongoose');
+
+new Schema = mongoose.Schema;
+
+const workoutSchema = new Schema({
+    date: {
+
+    },
+    name: {
+
+    },
+    type: {
+
+    },
+    weight: {
+
+    },
+    sets: {
+
+    },
+    reps: {
+
+    },
+    duration: {
+
+    },
+    distance: {
+        
+    }
+})
