@@ -1,8 +1,7 @@
 // date, name, type, weight, sets, reps, and duration of exercise, distance
 
 const mongoose = require('mongoose');
-
-new Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({
     date: {
@@ -39,6 +38,6 @@ const workoutSchema = new Schema({
 
 });
 
-const Workout = mongoose.model('Workout', Workout);
+const Workout = mongoose.model('Workout', workoutSchema);
 
 module.exports = Workout;
