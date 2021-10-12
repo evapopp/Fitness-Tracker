@@ -6,29 +6,37 @@ new Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({
     date: {
-
+        type: Date,
+        default: Date.now,
     },
-    name: {
+    exercises:[
+        {
+            name: {
+                type: String,
+                trim: true,
+            },
+            type: {
+                type: String,
+                trim: true,
+            },
+            weight: {
+                type: Number,
+            },
+            sets: {
+                type: Number,
+            },
+            reps: {
+                type: Number,
+            },
+            duration: {
+                type: Number,
+            },
+            distance: {
+                type: Number,
+            },
+        },
+    ]
 
-    },
-    type: {
-
-    },
-    weight: {
-
-    },
-    sets: {
-
-    },
-    reps: {
-
-    },
-    duration: {
-
-    },
-    distance: {
-
-    }
 });
 
 const Workout = mongoose.model('Workout', Workout);
