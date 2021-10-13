@@ -7,7 +7,12 @@ router.get('/', (req, res) => {
 })
 
 router.get('/exercise', (req, res) => {
-       res.sendFile(path.join(__dirname, './public/exercise.html')); 
+    try{
+        res.sendFile(path.join(__dirname, './public/exercise.html')); 
+    } catch (err) {
+        res.status(400).json(err)
+    }
+
 })
 
 router.get('/stats', (req, res) => {
