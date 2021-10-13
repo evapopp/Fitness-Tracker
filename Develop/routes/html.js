@@ -3,15 +3,11 @@ const router = require('express').Router();
 
 router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
+    
 })
 
 router.get('/exercise', (req, res) => {
-    try {
-       res.sendFile(path.join(__dirname, '../public/exercise.html')); 
-    } catch (err){
-        console.log('here is the error', err)
-    }
-    
+       res.sendFile(path.join(__dirname, './public/exercise.html')); 
 })
 
 router.get('/stats', (req, res) => {
@@ -19,15 +15,3 @@ router.get('/stats', (req, res) => {
 })
 
 module.exports = router;
-
-// module.exports = function (app) {
-//     app.get('/', function (req, res) {
-//       res.sendFile(path.join(__dirname, '../public/index.html'));
-//     });
-//     app.get('/exercise', function (req, res) {
-//       res.sendFile(path.join(__dirname, '../public/exercise.html'));
-//     });
-//     app.get('/stats', function (req, res) {
-//       res.sendFile(path.join(__dirname, '../public/stats'));
-//     });
-//   };

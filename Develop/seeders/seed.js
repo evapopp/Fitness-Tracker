@@ -129,6 +129,8 @@ db.Workout.deleteMany({})
   .then(() => db.Workout.collection.insertMany(workoutSeed))
   .then((data) => {
     console.log(data.result.n + ' records inserted!');
+    console.log(data)
+    console.log(data.result)
     process.exit(0);
   })
   .catch((err) => {
